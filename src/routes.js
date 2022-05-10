@@ -1,13 +1,12 @@
 const path = require('path');
 const boom = require('@hapi/boom');
+const { mainPage, mainPageCSS } = require('./handler');
 
 const routes = [
     {
         method: 'GET',
         path: '/',
-        handler: (request, h) => {
-            return h.file('index.html');
-        },
+        handler: mainPage,
         options: {
             files: {
                 relativeTo: path.join(__dirname, 'static'),
@@ -17,9 +16,7 @@ const routes = [
     {
         method: 'GET',
         path: '/index.css',
-        handler: (request, h) => {
-            return h.file('index.css');
-        },
+        handler: mainPageCSS,
         options: {
             files: {
                 relativeTo: path.join(__dirname, 'static'),

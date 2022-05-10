@@ -44,7 +44,6 @@ body{
     max-width: 500px;
     flex-grow: 4;
     overflow: auto;
-    background-color: aqua;
 }
 #input-file-group{
     display: flex;

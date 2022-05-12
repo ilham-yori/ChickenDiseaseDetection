@@ -16,7 +16,7 @@ Our Team Information
 - (MD) Moch Yusuf Faisal Akbar Anwari A2121F1529
 - (MD) Ilham Yori Pradana A2121F1534
 
-##How to Run the Website
+How to Run the Website
 --
 ```
 npm run start

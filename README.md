@@ -18,6 +18,9 @@ Our Team Information
 
 How to Run the Website
 --
+1. Clone the github
+2. Open/Use Command Line and Go to the github directory in your local directory
+3. Run the Code below :
 ```
 npm run start
 ```

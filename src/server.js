@@ -1,6 +1,7 @@
 const Hapi = require('@hapi/hapi');
 const routes = require('./routes');
 const registers = require('./register');
+const path = require('path');
 
 const init = async() => {
     const server = Hapi.server({
@@ -13,6 +14,13 @@ const init = async() => {
         },
     });
     await server.register(registers);
+    server.views({
+        engines: {
+            hbs: require('handlebars')
+        },
+        path: path.join(__dirname, 'views'),
+        layout: 'index'
+    })
     server.route(routes);
     await server.start();
     console.log('Server running on %s', server.info.uri);

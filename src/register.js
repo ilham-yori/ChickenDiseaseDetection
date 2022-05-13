@@ -5,6 +5,9 @@ const registers = [
     {
         plugin: require('@hapi/inert'),
     },
+    {
+        plugin: require('@hapi/basic')
+    },
 ];
 
 module.exports = registers;

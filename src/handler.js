@@ -5,5 +5,10 @@ const mainPage = (request, h) => {
 const mainPageCSS = (request, h) => {
     return h.file('index.css');
 }
-
-module.exports = { mainPage, mainPageCSS };
+const predictPage = (request, h) => {
+    return h.file('predict_page.html');
+}
+const predictCSS = (request, h) => {
+    return h.file('predict_page.css');
+}
+module.exports = { mainPage, mainPageCSS, predictPage, predictCSS };

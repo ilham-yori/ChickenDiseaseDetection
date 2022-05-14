@@ -13,7 +13,7 @@ How did our team come up with this project?
 We found that disease in chickens is quite difficult for farmers, because when a chicken is sick, other chickens have the potential to be infected with the same disease, so we propose a project that can recognize disease in chickens through chicken droppings. We are trying to combine machine learning, cloud computing, and mobile development in a disease classification project in chickens.
 
 ## Screenshots
-![Example screenshot](./src/view/readmefiles.png)
+![Example screenshot](./src/views/readmefiles.png)
 <!-- If you have screenshots you'd like to share, include them here. -->
 
 Our Team Information

@@ -1,45 +1,56 @@
-package com.midas.midaschick.ui.onboarding
+package com.midas.midaschick.ui.splash
 
 import android.content.Context
 import android.content.Intent
 import android.os.Build
 import androidx.appcompat.app.AppCompatActivity
 import android.os.Bundle
+import android.os.Handler
+import android.os.Looper
 import android.view.WindowInsets
 import android.view.WindowManager
 import androidx.datastore.core.DataStore
 import androidx.datastore.preferences.core.Preferences
 import androidx.datastore.preferences.preferencesDataStore
 import androidx.lifecycle.ViewModelProvider
-import com.midas.midaschick.R
-import com.midas.midaschick.databinding.ActivityOnBoardingBinding
 import com.midas.midaschick.databinding.ActivitySplashBinding
-import com.midas.midaschick.model.UserModel
 import com.midas.midaschick.model.UserPreference
 import com.midas.midaschick.ui.ViewModelFactory
 import com.midas.midaschick.ui.main.MainActivity
+import com.midas.midaschick.ui.onboarding.OnBoardingActivity
 
 private val Context.dataStore: DataStore<Preferences> by preferencesDataStore(name = "settings")
 
-class OnBoardingActivity : AppCompatActivity() {
+class SplashActivity : AppCompatActivity() {
 
-    private lateinit var binding: ActivityOnBoardingBinding
-    private lateinit var onBoardingViewModel: OnBoardingViewModel
+    private lateinit var binding: ActivitySplashBinding
+    private lateinit var splashViewModel: SplashViewModel
 
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
-        binding = ActivityOnBoardingBinding.inflate(layoutInflater)
+        binding = ActivitySplashBinding.inflate(layoutInflater)
         setContentView(binding.root)
 
         setupView()
         setupViewModel()
 
-        binding.button.setOnClickListener {
-            val model = UserModel(true)
-            onBoardingViewModel.saveUser(model)
-            val move = Intent(this@OnBoardingActivity, MainActivity::class.java)
-            startActivity(move)
-            finish()
+        val tigaDetik : Long = 3000
+        val loop = Handler(Looper.getMainLooper())
+
+        splashViewModel.getUser().observe(this) { user ->
+            if (user.isState) {
+                loop.postDelayed({
+                    val move = Intent(this@SplashActivity, MainActivity::class.java)
+                    startActivity(move)
+                    finish()
+                }, tigaDetik)
+            }else{
+                loop.postDelayed({
+                    val move = Intent(this@SplashActivity, OnBoardingActivity::class.java)
+                    startActivity(move)
+                    finish()
+                }, tigaDetik)
+            }
         }
     }
 
@@ -57,9 +68,9 @@ class OnBoardingActivity : AppCompatActivity() {
     }
 
     private fun setupViewModel() {
-        onBoardingViewModel = ViewModelProvider(
+        splashViewModel = ViewModelProvider(
             this,
             ViewModelFactory(UserPreference.getInstance(dataStore))
-        )[OnBoardingViewModel::class.java]
+        )[SplashViewModel::class.java]
     }
 }

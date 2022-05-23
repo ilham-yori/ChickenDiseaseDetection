@@ -1,0 +1,10 @@
+<resources>
+    <string name="app_name">Midas Chick</string>
+    <string name="title_menu_1">Memilih Gambar</string>
+    <string name="title_menu_2">Proses Analisis</string>
+    <string name="title_menu_3">Membaca hasil dan informasi tetang penyakit</string>
+    <string name="desc_menu_1">Pilihlah gambar kotoran ayam yang ingin anda identifikasi, anda dapat memilih gambar melalui galeri atau memfoto secara langsung</string>
+    <string name="desc_menu_2">Tunggulah beberapa detik untuk medapatkan hasil analisis penyakit</string>
+    <string name="desc_menu_3">Bacalah hasil analisis mengenai penyakit yang diderita ayam, serta informasi mengenai tentang penyakit tersebut dan cara mengobatinya</string>
+    <string name="learn_now">Belajar Sekarang</string>
+</resources>

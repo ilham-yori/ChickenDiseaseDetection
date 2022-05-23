@@ -11,4 +11,10 @@ const predictPage = (request, h) => {
 const predictCSS = (request, h) => {
     return h.file('predict_page.css');
 }
-module.exports = { mainPage, mainPageCSS, predictPage, predictCSS };
+const aboutPage = (request, h) => {
+    return h.file('About.html');
+}
+const aboutPageCSS = (request, h) => {
+    return h.file('About.css');
+}
+module.exports = { mainPage, mainPageCSS, predictPage, predictCSS, aboutPage, aboutPageCSS };

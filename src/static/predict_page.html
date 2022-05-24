@@ -10,20 +10,19 @@
 <body>
     <div class="upload-image-group">
         <h1 id="upload-title">Upload Image</h1>
-        <form action="/predict" method="post" class="form-upload-group">
+        <form action="/predict" method="post" class="form-upload-group" enctype="multipart/form-data">
             <div id="input-file-group">
                 <label id="label-uploaded-image" for="upload-images">Browse...</label>
-                <input id="upload-images" type="file" name="filename" accept="image/*"/>
+                <input id="upload-images" type="file" name="filename" accept="image/*" required/>
                 <button type="button" id="button-browse-image">Browse</button>
             </div>
-            <button type="button" id="upload-button">Upload</button>
+            <button type="submit" id="upload-button">Upload</button>
         </form>
     </div>
     <script type="text/javascript">
         var input_file_group = document.getElementById('input-file-group');
         const upload_images = document.getElementById('upload-images');
         const label_image = document.getElementById('label-uploaded-image');
-        const upload_button = document.getElementById('upload-button');
         const chooseFileInput = () => {
             upload_images.click();
         }
@@ -41,9 +40,6 @@
             })
         }
         design_upload_image();
-        upload_button.addEventListener('click', () => {
-            window.location.href = 'http://localhost:3000/imageUploaded';
-        });
     </script>
 </body>
 </html>

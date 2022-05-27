@@ -23,3 +23,14 @@ https://drive.google.com/drive/folders/1jGoohtw3-dMPfQM6iezK7rbz8S0uNiis?usp=sha
 
 ![metric vgg screenshot](metricvgg19.png)
 <!-- If you have screenshots you'd like to share, include them here. -->
+
+## MobileNet
+
+>  result of MobileNet Model
+
+![Classification report vgg screenshot](classification_reportmobilenet.png)
+
+> accuracy and loss metric
+
+![metric vgg screenshot](metricmobilenet.png)
+<!-- If you have screenshots you'd like to share, include them here. -->

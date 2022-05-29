@@ -3,6 +3,10 @@
   <component name="DesignSurface">
     <option name="filePathToZoomLevelMap">
       <map>
+        <entry key="..\:/MidasChick/MidasChick/app/src/main/res/layout/activity_main.xml" value="0.33" />
+        <entry key="..\:/MidasChick/MidasChick/app/src/main/res/layout/activity_on_boarding.xml" value="0.1762917933130699" />
+        <entry key="..\:/MidasChick/MidasChick/app/src/main/res/layout/activity_splash.xml" value="0.358695652173913" />
+        <entry key="..\:/MidasChick/MidasChick/app/src/main/res/menu/bottom_nav_menu.xml" value="0.2203125" />
         <entry key="..\:/Project/Capstone_C22-PS045/ChickenDiseaseDetection/MidasChick/app/src/main/res/drawable/ic_circle_24.xml" value="0.2265" />
         <entry key="..\:/Project/Capstone_C22-PS045/ChickenDiseaseDetection/MidasChick/app/src/main/res/layout/activity_on_boarding.xml" value="0.2" />
         <entry key="..\:/Project/Capstone_C22-PS045/ChickenDiseaseDetection/MidasChick/app/src/main/res/layout/activity_splash.xml" value="0.22826086956521738" />

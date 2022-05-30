@@ -18,6 +18,7 @@ import com.midas.midaschick.model.UserModel
 import com.midas.midaschick.model.UserPreference
 import com.midas.midaschick.ui.ViewModelFactory
 import com.midas.midaschick.ui.main.MainActivity
+import kotlinx.android.synthetic.main.activity_on_boarding.*
 
 private val Context.dataStore: DataStore<Preferences> by preferencesDataStore(name = "settings")
 
@@ -32,6 +33,7 @@ class OnBoardingActivity : AppCompatActivity() {
         setContentView(binding.root)
 
         setupView()
+        button()
         setupViewModel()
 
         binding.button.setOnClickListener {
@@ -54,6 +56,12 @@ class OnBoardingActivity : AppCompatActivity() {
             )
         }
         supportActionBar?.hide()
+    }
+
+    private fun button() {
+        button.setOnClickListener {
+            startActivity(Intent(this, MainActivity::class.java))
+        }
     }
 
     private fun setupViewModel() {

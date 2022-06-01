@@ -7,4 +7,6 @@
     <string name="desc_menu_2">Tunggulah beberapa detik untuk medapatkan hasil analisis penyakit</string>
     <string name="desc_menu_3">Bacalah hasil analisis mengenai penyakit yang diderita ayam, serta informasi mengenai tentang penyakit tersebut dan cara mengobatinya</string>
     <string name="learn_now">Belajar Sekarang</string>
+    <!-- TODO: Remove or change this placeholder text -->
+    <string name="hello_blank_fragment">Hello blank fragment</string>
 </resources>

@@ -1,0 +1,66 @@
+{% extends 'base.html' %}
+{% block content %}
+
+<!-- page-title -->
+<section class="page-title centred" style="background-image: url(../static/main/images/background/page-title.jpg);">
+    <div class="container">
+        <div class="content-box" style="background-color: #003cff;">
+            <div class="title">Chicken Disease Classification Team</div>
+                <ul class="team-members">
+                    <li>Moh. Badris Sholeh Rahmatullah - M2258G2238</li>
+                    <li>Aulia Ligar Salma Hanani - M2258G2240</li>
+                    <li>Steven Febrianto - C2172F1707</li>
+                    <li>Dian Puspitasari - C2214G1977</li>
+                    <li>Moch Yusuf Faisal Akbar Anwari - A2121F1529</li>
+                    <li>Ilham Yori Pradana - A2121F1534</li>
+                </ul>
+            </div>
+    </div>
+</section>
+<!-- page-title end -->
+
+<!-- form-section -->
+<section class="contact-section" style="padding-top:50px;" id="predict1">
+    <div class="container">
+        <div class="title-box centred">
+            <div class="sec-title">Upload an Image to Make a Prediction</div>
+        </div>
+        <form class="login100-form validate-form" action="/predict" method=post enctype=multipart/form-data>
+            <div class="row" style=" width: 35%; margin: auto; padding: 15px;">
+                <div class="column">
+                    <div class="form-check form-check-inline">
+                        <p style="font-weight: bold; color: black;">Select Model : </p>
+                    </div>
+                </div>
+                <div class="column">
+                    <div class="form-check form-check-inline">
+                        <select name="select_model" id="selected_model">
+                            <!--
+                                Option for choosing the model 
+                                <option value='model'>Model</option> -->
+                        </select>
+                    </div>
+                </div>
+            </div>
+            <img id="image-preview" alt="image preview" src="#" style="width: 35%;" />
+            <div class="container-login100-form-btn">
+                <div class="wrap-input100 validate-input" data-validate="Image file is required" id="input">
+                    <input class="input100" id="image-source" name="file" onchange="previewImage();" type="file"
+                        alt="Input Image" accept="image/jpeg,image/jpg,image/png">
+                    <span class="focus-input100"></span>
+                    <span class="symbol-input100">
+                        <i class="fa fa-file" aria-hidden="true"></i>
+                    </span>
+                </div>
+            </div>
+            <div class="container-login100-form-btn">
+                <button class="login100-form-btn" type="submit">
+                    Execute
+                </button>
+            </div>
+        </form>
+    </div>
+</section>
+<!-- form-section end -->
+
+{% endblock %}

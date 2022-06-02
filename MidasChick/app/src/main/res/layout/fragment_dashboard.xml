@@ -29,14 +29,13 @@
         <TextView
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
-            android:textColor="@color/navi"
-            android:text="MidasChick"
-            android:textStyle="bold"
-            android:layout_marginTop="10dp"
             android:layout_below="@+id/vp_slider"
             android:layout_centerHorizontal="true"
-            android:textSize="18sp"
-            />
+            android:layout_marginTop="10dp"
+            android:text="MidasChick"
+            android:textColor="@color/navi"
+            android:textSize="32sp"
+            android:textStyle="bold" />
 
     </RelativeLayout>
 
@@ -51,7 +50,9 @@
 
         <androidx.cardview.widget.CardView
             android:layout_width="0dp"
-            android:layout_height="10dp"
+            android:layout_height="0dp"
+            android:layout_margin="10dp"
+            app:cardBackgroundColor="@color/fragment_bg_color"
             app:cardElevation="4dp"
             android:layout_rowWeight="1"
             android:layout_columnWeight="1"
@@ -70,13 +71,17 @@
                 android:textColor="#000"
                 android:layout_alignParentBottom="true"
                 android:layout_marginBottom="25dp"
+                android:layout_marginStart="20dp"
+                android:textSize="18dp"
                 android:textStyle="bold"/>
             </RelativeLayout>
         </androidx.cardview.widget.CardView>
 
         <androidx.cardview.widget.CardView
             android:layout_width="0dp"
-            android:layout_height="10dp"
+            android:layout_height="0dp"
+            android:layout_margin="10dp"
+            app:cardBackgroundColor="@color/fragment_bg_color"
             app:cardElevation="4dp"
             android:layout_rowWeight="1"
             android:layout_columnWeight="1"
@@ -95,13 +100,17 @@
                     android:textColor="#000"
                     android:layout_alignParentBottom="true"
                     android:layout_marginBottom="25dp"
+                    android:layout_marginStart="20dp"
+                    android:textSize="18dp"
                     android:textStyle="bold"/>
             </RelativeLayout>
         </androidx.cardview.widget.CardView>
 
         <androidx.cardview.widget.CardView
             android:layout_width="0dp"
-            android:layout_height="10dp"
+            android:layout_height="0dp"
+            android:layout_margin="10dp"
+            app:cardBackgroundColor="@color/fragment_bg_color"
             app:cardElevation="4dp"
             android:layout_rowWeight="1"
             android:layout_columnWeight="1"
@@ -120,13 +129,17 @@
                     android:textColor="#000"
                     android:layout_alignParentBottom="true"
                     android:layout_marginBottom="25dp"
+                    android:layout_marginStart="20dp"
+                    android:textSize="18dp"
                     android:textStyle="bold"/>
             </RelativeLayout>
         </androidx.cardview.widget.CardView>
 
         <androidx.cardview.widget.CardView
             android:layout_width="0dp"
-            android:layout_height="10dp"
+            android:layout_height="0dp"
+            android:layout_margin="10dp"
+            app:cardBackgroundColor="@color/fragment_bg_color"
             app:cardElevation="4dp"
             android:layout_rowWeight="1"
             android:layout_columnWeight="1"
@@ -145,6 +158,8 @@
                     android:textColor="#000"
                     android:layout_alignParentBottom="true"
                     android:layout_marginBottom="25dp"
+                    android:layout_marginStart="20dp"
+                    android:textSize="18dp"
                     android:textStyle="bold"/>
             </RelativeLayout>
         </androidx.cardview.widget.CardView>

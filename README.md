@@ -27,42 +27,42 @@ Our Team Information
 - (MD) Ilham Yori Pradana A2121F1534
 
 ## Setup
---
-1. Clone this repository
+
+Clone this repository
 ```
 git clone https://github.com/ilham-yori/ChickenDiseaseDetection.git
 ```
 
-2. Change the current directory to the cloned git directory
+Change the current directory to the cloned git directory
 ```
 cd ChickenDiseaseDetection
 ```
 
-3. Create the python virtual environment
+Create the python virtual environment
 ```
 pip install virtualenv
 virtualenv venv
 ```
 
-4. Initialize virtual environment
-### Linux
+Initialize virtual environment
+#### Linux
 ```
 source venv/bin/activate
 ```
 
-### Windows
+#### Windows
 ```
 .\venv\Scripts\activate
 ```
 
-5. Install the dependencies requirement with pip
+Install the dependencies requirement with pip
 ```
 pip install -r requirements.txt
 ```
 
-6. Run the app with Flask
+Run the app with Flask
 ```
 flask run
 ```
 
-7. Now, open http://127.0.0.1:5000/ on your browser
+Now, open http://127.0.0.1:5000/ on your browser

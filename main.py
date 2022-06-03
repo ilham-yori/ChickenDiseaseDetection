@@ -7,7 +7,7 @@ from flask import Flask, request, redirect, render_template
 from tensorflow.keras.models import load_model
 from tensorflow.keras.models import model_from_json
 
-ALLOWED_EXTENSIONS = {'png', 'jpg', 'jpeg'}
+ALLOWED_EXTENSIONS = {'png', 'jpg', 'jpeg', 'jfif'}
 app = Flask(__name__)
 UPLOAD_FOLDER = 'static/uploads/'
 app.config['MAX_CONTENT_LENGTH'] = 10 * 1024 * 1024
@@ -27,7 +27,8 @@ def index():
 @app.route('/predict', methods=['POST'])
 def predict():
     chosen_model = request.form['select_model']
-    model_dict = {'model'   :   'static/MLModule/model_here',#change the model_here to a model filename
+    model_dict = {  'modelmobilenetv1'   :   'static/MLModule/modelmobilenetv1.h5',
+                    'modelresnet': 'static/MLModule/modelresnet.h5'
                     }
     if chosen_model in model_dict:
         model = load_model(model_dict[chosen_model]) 
@@ -48,10 +49,10 @@ def predict():
 def predict_result(model, run_time, probs, img):
     class_list = {'Coccidiosis': 0, 'Healthy': 1, 'New Castle Disease': 2, 'Salmonella': 3}
     idx_pred = probs.index(max(probs))
-    labels = list(class_list.keys())
+    labels = list(class_list)
     return render_template('/result_select.html', labels=labels, 
                             probs=probs, model=model, pred=idx_pred, 
                             run_time=run_time, img=img)
 
 if __name__ == "__main__": 
-        app.run(debug=True, host='0.0.0.0', port=5000)
+        app.run(debug=True, host='0.0.0.0', port=2000)

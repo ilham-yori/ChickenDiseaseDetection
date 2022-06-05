@@ -2,6 +2,9 @@
 shared files follow this link. 
 https://drive.google.com/drive/folders/1jGoohtw3-dMPfQM6iezK7rbz8S0uNiis?usp=sharing
 
+Cleaning Dataset.
+(https://drive.google.com/drive/folders/1UdrAKUTGDg7WzY7ehxapKRr73QpFrzw8?usp=sharing)
+
 ## VGG16
 
 >  result of VGG16 Model

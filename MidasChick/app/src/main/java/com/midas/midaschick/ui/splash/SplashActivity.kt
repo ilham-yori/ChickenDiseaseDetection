@@ -16,8 +16,11 @@ import androidx.lifecycle.ViewModelProvider
 import com.midas.midaschick.databinding.ActivitySplashBinding
 import com.midas.midaschick.model.UserPreference
 import com.midas.midaschick.ui.ViewModelFactory
+import com.midas.midaschick.ui.coccidiosis.CoccidiosisActivity
 import com.midas.midaschick.ui.main.MainActivity
+import com.midas.midaschick.ui.newcastle.NewCastleActivity
 import com.midas.midaschick.ui.onboarding.OnBoardingActivity
+import com.midas.midaschick.ui.scan.ScanActivity
 
 private val Context.dataStore: DataStore<Preferences> by preferencesDataStore(name = "settings")
 
@@ -40,7 +43,7 @@ class SplashActivity : AppCompatActivity() {
         splashViewModel.getUser().observe(this) { user ->
             if (user.isState) {
                 loop.postDelayed({
-                    val move = Intent(this@SplashActivity, MainActivity::class.java)
+                    val move = Intent(this@SplashActivity, ScanActivity::class.java)
                     startActivity(move)
                     finish()
                 }, tigaDetik)

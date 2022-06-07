@@ -4,7 +4,7 @@
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-    tools:context=".ui.newcastle.NewCastleActivity">
+    tools:context=".ui.salmonella.SalmonellaActivity">
 
     <androidx.constraintlayout.widget.ConstraintLayout
         android:layout_width="match_parent"
@@ -17,7 +17,7 @@
             app:layout_constraintStart_toEndOf="parent"
             app:layout_constraintTop_toTopOf="parent"
             android:layout_marginTop="10dp"
-            android:text="@string/new_castle_disease"
+            android:text="@string/salmonella"
             android:textAlignment="center"
             android:textColor="@color/black"
             android:textSize="27sp"
@@ -60,7 +60,7 @@
             android:layout_marginEnd="16dp"
             android:layout_marginTop="8dp"
             android:layout_marginBottom="16dp"
-            android:text="@string/penjelasan_ncd"
+            android:text="@string/penjelasan_salmone"
             android:justificationMode="inter_word"
             android:textColor="@color/black"
             android:textSize="16sp"
@@ -92,7 +92,7 @@
             android:layout_marginEnd="16dp"
             android:layout_marginTop="8dp"
             android:layout_marginBottom="16dp"
-            android:text="@string/gejala_ncd"
+            android:text="@string/gejala_salmone"
             android:justificationMode="inter_word"
             android:textColor="@color/black"
             android:textSize="16sp"
@@ -124,7 +124,7 @@
             android:layout_marginEnd="16dp"
             android:layout_marginTop="8dp"
             android:layout_marginBottom="16dp"
-            android:text="@string/penanganan_ncd"
+            android:text="@string/penanganan_salmone"
             android:justificationMode="inter_word"
             android:textColor="@color/black"
             android:textSize="16sp"
@@ -156,7 +156,7 @@
             android:layout_marginEnd="16dp"
             android:layout_marginTop="8dp"
             android:layout_marginBottom="16dp"
-            android:text="@string/mencegah_ncd"
+            android:text="@string/mencegah_salmone"
             android:justificationMode="inter_word"
             android:textColor="@color/black"
             android:textSize="16sp"
@@ -181,6 +181,5 @@
             android:textStyle="bold" />
 
     </androidx.constraintlayout.widget.ConstraintLayout>
-
 
 </ScrollView>

@@ -13,7 +13,18 @@
         android:name="android.permission.WRITE_EXTERNAL_STORAGE"
         android:maxSdkVersion="18" />
 
+    <queries>
+        <intent>
+            <action android:name="android.intent.action.VIEW" />
+
+            <category android:name="android.intent.category.BROWSABLE" />
+
+            <data android:scheme="https" />
+        </intent>
+    </queries>
+
     <application
+        android:usesCleartextTraffic="true"
         android:allowBackup="true"
         android:dataExtractionRules="@xml/data_extraction_rules"
         android:fullBackupContent="@xml/backup_rules"
@@ -24,7 +35,16 @@
         android:theme="@style/Theme.MidasChick"
         tools:targetApi="31">
         <activity
-            android:name=".NewCastleActivity"
+            android:name=".ui.scan.ScanActivity"
+            android:exported="false" />
+        <activity
+            android:name=".ui.salmonella.SalmonellaActivity"
+            android:exported="false" />
+        <activity
+            android:name=".ui.coccidiosis.CoccidiosisActivity"
+            android:exported="false" />
+        <activity
+            android:name=".ui.newcastle.NewCastleActivity"
             android:exported="false" />
         <activity
             android:name=".ui.onboarding.OnBoardingActivity"
@@ -41,6 +61,16 @@
                 <category android:name="android.intent.category.LAUNCHER" />
             </intent-filter>
         </activity>
+
+        <provider
+            android:name="androidx.core.content.FileProvider"
+            android:authorities="com.midas.midaschick"
+            android:exported="false"
+            android:grantUriPermissions="true">
+            <meta-data
+                android:name="android.support.FILE_PROVIDER_PATHS"
+                android:resource="@xml/file_paths" />
+        </provider>
     </application>
 
 </manifest>

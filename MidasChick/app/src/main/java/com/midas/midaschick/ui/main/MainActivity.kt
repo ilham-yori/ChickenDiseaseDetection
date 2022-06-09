@@ -3,11 +3,7 @@ package com.midas.midaschick.ui.main
 import android.content.Intent
 import androidx.appcompat.app.AppCompatActivity
 import android.os.Bundle
-import androidx.navigation.NavController
-import com.midas.midaschick.R
 import com.midas.midaschick.databinding.ActivityMainBinding
-import com.midas.midaschick.databinding.ActivityScanBinding
-import com.midas.midaschick.ui.coccidiosis.CoccidiosisActivity
 import com.midas.midaschick.ui.listdisease.ListDiseaseActivity
 import com.midas.midaschick.ui.scan.ScanActivity
 

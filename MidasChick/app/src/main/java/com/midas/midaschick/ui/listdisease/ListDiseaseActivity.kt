@@ -8,7 +8,6 @@ import androidx.recyclerview.widget.RecyclerView
 import com.midas.midaschick.R
 import com.midas.midaschick.adapter.ListDiseaseAdapter
 import com.midas.midaschick.databinding.ActivityListDiseaseBinding
-import com.midas.midaschick.databinding.ActivitySplashBinding
 import com.midas.midaschick.model.Disease
 import com.midas.midaschick.ui.coccidiosis.CoccidiosisActivity
 import com.midas.midaschick.ui.newcastle.NewCastleActivity

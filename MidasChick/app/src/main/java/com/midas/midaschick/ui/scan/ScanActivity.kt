@@ -11,7 +11,6 @@ import androidx.appcompat.app.AppCompatActivity
 import android.os.Bundle
 import android.provider.MediaStore
 import android.util.Log
-import android.view.View
 import android.widget.Toast
 import androidx.activity.result.contract.ActivityResultContracts
 import androidx.core.app.ActivityCompat
@@ -27,15 +26,12 @@ import com.midas.midaschick.databinding.ActivityScanBinding
 import com.midas.midaschick.ui.coccidiosis.CoccidiosisActivity
 import com.midas.midaschick.ui.createCustomTempFile
 import com.midas.midaschick.ui.newcastle.NewCastleActivity
-import com.midas.midaschick.ui.onboarding.OnBoardingActivity
 import com.midas.midaschick.ui.reduceFileImage
 import com.midas.midaschick.ui.salmonella.SalmonellaActivity
 import com.midas.midaschick.ui.uriToFile
-import okhttp3.MediaType
 import okhttp3.MediaType.Companion.toMediaType
 import okhttp3.MediaType.Companion.toMediaTypeOrNull
 import okhttp3.MultipartBody
-import okhttp3.RequestBody
 import okhttp3.RequestBody.Companion.asRequestBody
 import okhttp3.RequestBody.Companion.toRequestBody
 import org.json.JSONObject

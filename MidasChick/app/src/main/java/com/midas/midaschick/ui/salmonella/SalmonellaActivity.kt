@@ -2,7 +2,6 @@ package com.midas.midaschick.ui.salmonella
 
 import androidx.appcompat.app.AppCompatActivity
 import android.os.Bundle
-import com.midas.midaschick.databinding.ActivityOnBoardingBinding
 import com.midas.midaschick.databinding.ActivitySalmonellaBinding
 
 class SalmonellaActivity : AppCompatActivity() {

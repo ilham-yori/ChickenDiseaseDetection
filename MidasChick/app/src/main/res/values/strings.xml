@@ -39,4 +39,16 @@
     <string name="scan">Scan</string>
     <string name="prediksi">Prediksi :</string>
 
+    <string-array name="name">
+        <item>Coccidiosis</item>
+        <item>NewCastleDisease</item>
+        <item>Salmonella</item>
+    </string-array>
+
+    <string-array name="gambar">
+        <item>@drawable/coccidiosis</item>
+        <item>@drawable/new_castle</item>
+        <item>@drawable/salmonella</item>
+    </string-array>
+
 </resources>

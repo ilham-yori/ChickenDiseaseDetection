@@ -7,6 +7,7 @@
     <string name="desc_menu_2">Tunggulah beberapa detik untuk medapatkan hasil analisis penyakit</string>
     <string name="desc_menu_3">Bacalah hasil analisis mengenai penyakit yang diderita ayam, serta informasi mengenai tentang penyakit tersebut dan cara mengobatinya</string>
     <string name="scan_now">Scan Sekarang</string>
+    <string name="healthy">Sehat</string>
     <string name="new_castle_disease">New Castle Disease (Tetelo)</string>
     <string name="coccidiosis">Coccidiosis</string>
     <string name="salmonella">Salmonella</string>
@@ -33,5 +34,9 @@
     <string name="gejala_salmone">Gejala yang dapat dilihat dari unggas yang terkena penyakit ini adalah : \n • Diare yang dihasilkan mengandung kampur dan kotoran yang sering menempel pada anus\n • Unggas terlihat lesu karena berkurangnya konsumsi pakan dan air \n • Sering berkerumun</string>
     <string name="penanganan_salmone">Berikut ini cara menangani unggas yang terkena penyakit tersebut : \n • Pisahkan unggas dari kawanan dan tempatkan di lokasi yang aman, nyaman, hangat, dengan akses mudah ke air dan makanan, selain itu mengurangi stress.\n • Mengkonsumsi obat herbal seperti ekstrak dari tanaman thyme, dan kunyit.\n • Mengkonsumsi Probiotics, prebiotics, Antibiotics.\n • Menghubungi dokter hewan jika gejala semakin parah.</string>
     <string name="mencegah_salmone">Berikut ini cara mencegah penyakit tersebut : \n • Setiap unggas baru harus divaksinasi sebelum diperkenalkan ke kawanan dan memberikan vaksin pada setiap unggas.\n • Hindari membeli unggas dari tempat yang kurang bersih dan kurang terpercaya.\n • Mencegah populasi hewan pengerat yang tinggi dan lalat.\n • Menggunakan pakan fermentasi.  </string>
+    <string name="camera">Camera</string>
+    <string name="gallery">Gallery</string>
+    <string name="scan">Scan</string>
+    <string name="prediksi">Prediksi :</string>
 
 </resources>

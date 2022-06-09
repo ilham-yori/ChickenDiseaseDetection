@@ -43,7 +43,7 @@ class SplashActivity : AppCompatActivity() {
         splashViewModel.getUser().observe(this) { user ->
             if (user.isState) {
                 loop.postDelayed({
-                    val move = Intent(this@SplashActivity, ScanActivity::class.java)
+                    val move = Intent(this@SplashActivity, MainActivity::class.java)
                     startActivity(move)
                     finish()
                 }, tigaDetik)

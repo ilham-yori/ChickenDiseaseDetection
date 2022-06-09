@@ -16,7 +16,7 @@ android {
 
         testInstrumentationRunner "androidx.test.runner.AndroidJUnitRunner"
 
-        buildConfigField "String", "ENDPOINT", "\"http://34.101.36.56:5000/\""
+        buildConfigField "String", "ENDPOINT", "\"http://34.101.80.87:5000/\""
     }
 
     buildTypes {

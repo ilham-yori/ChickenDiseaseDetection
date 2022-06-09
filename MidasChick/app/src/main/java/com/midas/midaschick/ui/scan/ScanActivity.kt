@@ -11,25 +11,35 @@ import androidx.appcompat.app.AppCompatActivity
 import android.os.Bundle
 import android.provider.MediaStore
 import android.util.Log
+import android.view.View
 import android.widget.Toast
 import androidx.activity.result.contract.ActivityResultContracts
 import androidx.core.app.ActivityCompat
 import androidx.core.content.ContextCompat
 import androidx.core.content.FileProvider
+import androidx.core.view.isVisible
 import androidx.lifecycle.LiveData
 import androidx.lifecycle.MutableLiveData
 import com.midas.midaschick.R
 import com.midas.midaschick.data.remote.response.ServerResponse
 import com.midas.midaschick.data.remote.retrofit.APIConfig
 import com.midas.midaschick.databinding.ActivityScanBinding
+import com.midas.midaschick.ui.coccidiosis.CoccidiosisActivity
 import com.midas.midaschick.ui.createCustomTempFile
+import com.midas.midaschick.ui.newcastle.NewCastleActivity
+import com.midas.midaschick.ui.onboarding.OnBoardingActivity
 import com.midas.midaschick.ui.reduceFileImage
+import com.midas.midaschick.ui.salmonella.SalmonellaActivity
 import com.midas.midaschick.ui.uriToFile
+import okhttp3.MediaType
 import okhttp3.MediaType.Companion.toMediaType
 import okhttp3.MediaType.Companion.toMediaTypeOrNull
 import okhttp3.MultipartBody
+import okhttp3.RequestBody
 import okhttp3.RequestBody.Companion.asRequestBody
 import okhttp3.RequestBody.Companion.toRequestBody
+import org.json.JSONObject
+import org.json.JSONTokener
 import retrofit2.Call
 import retrofit2.Callback
 import retrofit2.Response
@@ -41,13 +51,12 @@ class ScanActivity : AppCompatActivity() {
     private lateinit var currentPhotoPath: String
     private var getFile: File? = null
 
-    private val _responseMessage = MutableLiveData<String>()
-    val responseMessage: LiveData<String> = _responseMessage
+    private val _responseMessage = MutableLiveData<String?>()
+    val responseMessage: LiveData<String?> = _responseMessage
 
     companion object {
         private val REQUIRED_PERMISSIONS = arrayOf(Manifest.permission.CAMERA)
         private const val REQUEST_CODE_PERMISSIONS = 10
-        const val token = "token_info"
     }
 
     override fun onCreate(savedInstanceState: Bundle?) {
@@ -71,11 +80,44 @@ class ScanActivity : AppCompatActivity() {
             startGallery()
         }
 
-        binding.btnUpload.setOnClickListener {
+        binding.btnScan.setOnClickListener {
             if(getFile != null){
+                showButton(true)
                 uploadImage()
                 responseMessage.observe(this){
-                    Toast.makeText(this@ScanActivity, it, Toast.LENGTH_SHORT).show()
+                    showButton(false)
+                    when (it) {
+                        "0" -> {
+                            binding.tvHasil.setText(R.string.coccidiosis)
+                            binding.btnInformasi.setText(R.string.coccidiosis)
+                            binding.btnInformasi.isVisible = true
+                            binding.btnInformasi.setOnClickListener {
+                                val move = Intent(this@ScanActivity, CoccidiosisActivity::class.java)
+                                startActivity(move)
+                            }
+                        }
+                        "1" -> {
+                            binding.tvHasil.setText(R.string.healthy)
+                        }
+                        "2" -> {
+                            binding.tvHasil.setText(R.string.new_castle_disease)
+                            binding.btnInformasi.setText(R.string.new_castle_disease)
+                            binding.btnInformasi.isVisible = true
+                            binding.btnInformasi.setOnClickListener {
+                                val move = Intent(this@ScanActivity, NewCastleActivity::class.java)
+                                startActivity(move)
+                            }
+                        }
+                        "3" -> {
+                            binding.tvHasil.setText(R.string.salmonella)
+                            binding.btnInformasi.setText(R.string.salmonella)
+                            binding.btnInformasi.isVisible = true
+                            binding.btnInformasi.setOnClickListener {
+                                val move = Intent(this@ScanActivity, SalmonellaActivity::class.java)
+                                startActivity(move)
+                            }
+                        }
+                    }
                 }
             }else{
                 Toast.makeText(this@ScanActivity, resources.getString(R.string.image_error), Toast.LENGTH_SHORT).show()
@@ -133,7 +175,7 @@ class ScanActivity : AppCompatActivity() {
         val intent = Intent()
         intent.action = ACTION_GET_CONTENT
         intent.type = "image/*"
-        val chooser = Intent.createChooser(intent, "Choose a Picture")
+        val chooser = Intent.createChooser(intent, "Pilih Gambar")
         launcherIntentGallery.launch(chooser)
     }
 
@@ -154,33 +196,30 @@ class ScanActivity : AppCompatActivity() {
 
     private fun uploadImage() {
         val file = reduceFileImage(getFile as File)
-        val model = "modelresnet"
-        val key = "safsa7fs9f87r6q97rpaofafe"
-        val modelFinal = model.toRequestBody("text/plain".toMediaType())
-        val keyFinal = key.toRequestBody("text/plain".toMediaType())
-        val requestImageFile = file.asRequestBody("image/jpeg".toMediaTypeOrNull())
+        val model = "modelresnet".toRequestBody("text/plain".toMediaType())
+        val key = "safsa7fs9f87r6q97rpaofafe".toRequestBody("text/plain".toMediaType())
+        val requestFile = file.asRequestBody("multipart/form-data".toMediaTypeOrNull())
         val imageMultipart: MultipartBody.Part = MultipartBody.Part.createFormData(
-            "photo",
+            "file",
             file.name,
-            requestImageFile
+            requestFile
         )
 
-        val client = APIConfig.getAPIService().uploadImage(imageMultipart, modelFinal, keyFinal)
+        val client = APIConfig.getAPIService().uploadImage(imageMultipart, model, key)
         client.enqueue(object : Callback<ServerResponse> {
             override fun onResponse(call: Call<ServerResponse>, response: Response<ServerResponse>) {
                 if (response.isSuccessful) {
                     val responseBody = response.body()
                     if (responseBody != null) {
-                        _responseMessage.postValue(responseBody.runTime.toString())
-                        println("jalan API")
+                        _responseMessage.postValue(responseBody.pred?.toString())
+
                     }
                 } else {
-                    /*val errorBody = response.errorBody()
+                    val errorBody = response.errorBody()
                     val json = errorBody?.string()
                     val objJSON = JSONTokener(json).nextValue() as JSONObject
                     val message = objJSON.getString("message")
-                    _responseMessage.postValue(response)*/
-                    println(response.errorBody())
+                    _responseMessage.postValue(message)
                 }
             }
 
@@ -188,5 +227,21 @@ class ScanActivity : AppCompatActivity() {
                 Log.e(ContentValues.TAG, "onFailure: ${t.message.toString()}")
             }
         })
+    }
+
+    private fun showButton(isBoolean: Boolean) {
+        if(isBoolean){
+            binding.imgAddStories.isVisible = false
+            binding.progressBar.isVisible = true
+            binding.linearLayout.isVisible = false
+            binding.btnScan.isVisible = false
+        }else{
+            binding.imgAddStories.isVisible = true
+            binding.progressBar.isVisible = false
+            binding.linearLayout.isVisible = false
+            binding.btnScan.isVisible = false
+            binding.tvPrediksi.isVisible = true
+            binding.tvHasil.isVisible = true
+        }
     }
 }

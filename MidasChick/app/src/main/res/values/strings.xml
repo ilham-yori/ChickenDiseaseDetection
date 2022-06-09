@@ -15,7 +15,7 @@
     <string name="bagaimana_gejalanya">Bagaimana Gejalanya ?</string>
     <string name="bagaimana_menanganinya">Bagaimana Menanganinya ?</string>
     <string name="bagaimana_mencegahnya">Bagaimana Mencegahnya ?</string>
-    <string name="spacing">\n \n \n \n</string>
+    <string name="spacing">\n </string>
 
     <string name="permission_error">Application Does Not Have Permission</string>
     <string name="image_error">Please Insert Image File</string>
@@ -38,6 +38,7 @@
     <string name="gallery">Gallery</string>
     <string name="scan">Scan</string>
     <string name="prediksi">Prediksi :</string>
+    <string name="dashboard">Dashboard</string>
 
     <string-array name="name">
         <item>Coccidiosis</item>

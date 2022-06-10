@@ -28,6 +28,21 @@ Our Team Information
 
 ## Setup
 
+Download the 1st model in this link :
+```
+https://drive.google.com/file/d/1pUdx3oZluqE5dmLzFvYP7GezKDCGRikN/view?usp=sharing
+```
+
+Download the 2nd model in this link :
+```
+https://drive.google.com/file/d/10KYb1_Vy8hOXzzSt89odNEBS_N3gjTn1/view?usp=sharing
+```
+
+After the files are downloaded, you have to move the files from download directory into /ChickenDiseaseDetection/static/MLModule directory
+```
+mv ./download ./ChickenDiseaseDetection/static/MLModule
+```
+
 Clone this repository
 ```
 git clone https://github.com/ilham-yori/ChickenDiseaseDetection.git
@@ -66,3 +81,16 @@ flask run
 ```
 
 Now, open http://127.0.0.1:5000/ on your browser
+
+### Google Cloud vm deployment
+- 
+
+Follow all the instructions on setup (Do not run the app with Flask) and make sure you set the firewall
+
+For our project, we set the firewall on 0.0.0.0 and allow the 5000 port
+
+then, copy the code below :
+
+```
+gunicorn --bind 0.0.0.0:5000 main:app --daemon
+```

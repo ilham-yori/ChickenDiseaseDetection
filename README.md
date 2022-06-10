@@ -14,7 +14,7 @@ We found that disease in chickens is quite difficult for farmers, because when a
 
 ## Screenshots
 an example of a dataset used regarding diseases in chickens that have been labeled
-![Example screenshot](.readmefiles.png)
+![Example screenshot](readmefiles.png)
 <!-- If you have screenshots you'd like to share, include them here. -->
 
 Our Team Information

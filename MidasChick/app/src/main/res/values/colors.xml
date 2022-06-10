@@ -14,8 +14,10 @@
     <color name="pink">#F06292</color>
     <color name="navi">#2D3D4F</color>
 
-    <color name="bottom_nav_background">#8CC0DE</color>
+    <color name="bg_background">#444444</color>
     <color name="bottom_nav_item">#FAF0D7</color>
     <color name="bottom_nav_selected_item">#F06292</color>
-    <color name="fragment_bg_color">#F4BFBF</color>
+    <color name="card_color">#EDEDED</color>
+    <color name="gray">#333</color>
+    <color name="dark_grey">#a9a9a9</color>
 </resources>

@@ -6,7 +6,50 @@
     <string name="desc_menu_1">Pilihlah gambar kotoran ayam yang ingin anda identifikasi, anda dapat memilih gambar melalui galeri atau memfoto secara langsung</string>
     <string name="desc_menu_2">Tunggulah beberapa detik untuk medapatkan hasil analisis penyakit</string>
     <string name="desc_menu_3">Bacalah hasil analisis mengenai penyakit yang diderita ayam, serta informasi mengenai tentang penyakit tersebut dan cara mengobatinya</string>
-    <string name="learn_now">Belajar Sekarang</string>
-    <!-- TODO: Remove or change this placeholder text -->
-    <string name="hello_blank_fragment">Hello blank fragment</string>
+    <string name="scan_now">Scan Sekarang</string>
+    <string name="healthy">Sehat</string>
+    <string name="new_castle_disease">New Castle Disease (Tetelo)</string>
+    <string name="coccidiosis">Coccidiosis</string>
+    <string name="salmonella">Salmonella</string>
+    <string name="apa_itu">Apa itu ?</string>
+    <string name="bagaimana_gejalanya">Bagaimana Gejalanya ?</string>
+    <string name="bagaimana_menanganinya">Bagaimana Menanganinya ?</string>
+    <string name="bagaimana_mencegahnya">Bagaimana Mencegahnya ?</string>
+    <string name="spacing">\n </string>
+
+    <string name="permission_error">Application Does Not Have Permission</string>
+    <string name="image_error">Please Insert Image File</string>
+
+    <string name="penjelasan_ncd">Newcastle Disease atau penyakit yang dikenal sebagai Tetelo, merupakan penyakit yang disebabkan oleh virus yang bernama Newcastle disease virus (NDV).</string>
+    <string name="gejala_ncd">Gejala yang dapat dilihat dari unggas yang terkena penyakit ini adalah : \n • Mengalami diare dan biasanya disertai dengan darah. \n • Posisi kepala dan leher yang tidak normal, mengakibatkan tampilan kepala miring atau leher bengkok. \n • Jalan dan gerakan yang tidak terkoordinasi, di mana unggas yang terkena mungkin terlihat sering tersandung, dan tampak kurang seimbang.</string>
+    <string name="penanganan_ncd">Berikut ini cara menangani unggas yang terkena penyakit tersebut : \n • Pisahkan unggas dari kawanan dan tempatkan di lokasi yang aman, nyaman, hangat, dengan akses mudah ke air dan makanan, selain itu mengurangi stress.\n • Mengkonsumsi Licorice (Glycyrrhiza glabra) dan Ekstrak Calendula officinalis.\n • Menghubungi dokter hewan jika gejala semakin parah.\n • Mengkonsumsi Vitamin A.</string>
+    <string name="mencegah_ncd">Berikut ini cara mencegah penyakit tersebut : \n • Menghindari paparan burung yang dapat menjadi pembawa NDV diam-diam dan dapat menyebarkan virus di kotorannya.\n • Setiap hewan yang menunjukkan gejala penyakit Newcastle harus segera diisolasi.\n • Setiap unggas baru harus divaksinasi sebelum diperkenalkan ke kawanan.\n • Memberikan Vitamin A yang cukup.\n • Memberikan vaksin pada unggas.</string>
+
+    <string name="penjelasan_coccid">Koksidiosis merupakan penyakit yang disebabkan oleh Eimeria sp. yang merupakan parasit protozoa yang dimana sebagian besar parasit ini menyerang saluran usus ayam, tetapi beberapa menyerang organ lain, seperti hati dan ginjal.</string>
+    <string name="gejala_coccid">Gejala yang dapat dilihat dari unggas yang terkena penyakit ini adalah : \n • Unggas terlihat lesu karena berkurangnya konsumsi pakan dan air \n • Terlihat kurang aktif dan sering pergi sendiri dan tampak bungkuk dengan bulu kusut\n • Kotoran yang dihasilkan mengandung darah, lendir dan air</string>
+    <string name="penanganan_coccid">Berikut ini cara menangani unggas yang terkena penyakit tersebut : \n • Pisahkan unggas dari kawanan dan tempatkan di lokasi yang aman, nyaman, hangat, dengan akses mudah ke air dan makanan, selain itu mengurangi stress.\n • Mengkonsumsi Amprolium, Toltrazuril, Antibiotics.\n • Mengkonsumsi obat herbal seperti daun johar, lidah buaya, kayu pinus, teh hijau, sambiloto, bawang putih dan tebu.\n • Menghubungi dokter hewan jika gejala semakin parah.</string>
+    <string name="mencegah_coccid">Berikut ini cara mencegah penyakit tersebut : \n • Membersihkan lingkungan tempat unggas dipelihara secara teratur, meminimalkan lumpur dan area lembab.\n • Meminimalisir kontaminasi kotoran pada tempat makan dan minum.  \n • Rawat tanah dengan pemutih atau kapur encer untuk mengurangi parasit dan isi ulang air dengan air bersih setiap hari.\n • Setiap unggas baru harus divaksinasi sebelum diperkenalkan ke kawanan dan memberikan vaksin pada setiap unggas.\n • Rancang area bertengger di atas lubang pembuangan yang disaring untuk kotoran, untuk meminimalkan kontak dengan kotoran.</string>
+
+    <string name="penjelasan_salmone">Salmonellosis adalah nama penyakit yang disebabkan oleh infeksi genus Salmonella.</string>
+    <string name="gejala_salmone">Gejala yang dapat dilihat dari unggas yang terkena penyakit ini adalah : \n • Diare yang dihasilkan mengandung kampur dan kotoran yang sering menempel pada anus\n • Unggas terlihat lesu karena berkurangnya konsumsi pakan dan air \n • Sering berkerumun</string>
+    <string name="penanganan_salmone">Berikut ini cara menangani unggas yang terkena penyakit tersebut : \n • Pisahkan unggas dari kawanan dan tempatkan di lokasi yang aman, nyaman, hangat, dengan akses mudah ke air dan makanan, selain itu mengurangi stress.\n • Mengkonsumsi obat herbal seperti ekstrak dari tanaman thyme, dan kunyit.\n • Mengkonsumsi Probiotics, prebiotics, Antibiotics.\n • Menghubungi dokter hewan jika gejala semakin parah.</string>
+    <string name="mencegah_salmone">Berikut ini cara mencegah penyakit tersebut : \n • Setiap unggas baru harus divaksinasi sebelum diperkenalkan ke kawanan dan memberikan vaksin pada setiap unggas.\n • Hindari membeli unggas dari tempat yang kurang bersih dan kurang terpercaya.\n • Mencegah populasi hewan pengerat yang tinggi dan lalat.\n • Menggunakan pakan fermentasi.  </string>
+    <string name="camera">Camera</string>
+    <string name="gallery">Gallery</string>
+    <string name="scan">Scan</string>
+    <string name="prediksi">Prediksi :</string>
+    <string name="dashboard">Dashboard</string>
+
+    <string-array name="name">
+        <item>Coccidiosis</item>
+        <item>NewCastleDisease</item>
+        <item>Salmonella</item>
+    </string-array>
+
+    <string-array name="gambar">
+        <item>@drawable/coccidiosis</item>
+        <item>@drawable/new_castle</item>
+        <item>@drawable/salmonella</item>
+    </string-array>
+
 </resources>

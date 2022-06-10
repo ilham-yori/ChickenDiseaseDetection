@@ -11,9 +11,7 @@ import androidx.datastore.core.DataStore
 import androidx.datastore.preferences.core.Preferences
 import androidx.datastore.preferences.preferencesDataStore
 import androidx.lifecycle.ViewModelProvider
-import com.midas.midaschick.R
 import com.midas.midaschick.databinding.ActivityOnBoardingBinding
-import com.midas.midaschick.databinding.ActivitySplashBinding
 import com.midas.midaschick.model.UserModel
 import com.midas.midaschick.model.UserPreference
 import com.midas.midaschick.ui.ViewModelFactory

@@ -19,4 +19,5 @@
     <color name="bottom_nav_selected_item">#F06292</color>
     <color name="card_color">#EDEDED</color>
     <color name="gray">#333</color>
+    <color name="dark_grey">#a9a9a9</color>
 </resources>

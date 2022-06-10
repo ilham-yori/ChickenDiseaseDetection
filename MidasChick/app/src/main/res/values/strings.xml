@@ -42,7 +42,7 @@
     <string name="info_penyakit">Info Penyakit</string>
     <string name="des_info">Berisikan info dari penyakit \nyang ada.</string>
     <string name="des_scan">Silahkan scan kotoran ayam disini!</string>
-    <string name="des_list_info_penyakit">Selalu jaga kesehatan hewan anda, cegah agar \ntidak terkena penyakit dibawah ini.</string>
+    <string name="des_list_info_penyakit">Lindungi ayammu, cek kesehatan solusinya. Cegah agar \ntidak terkena penyakit dibawah ini.</string>
     <string name="list_penyakit">List Penyakit</string>
 
     <string-array name="name">

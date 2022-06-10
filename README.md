@@ -83,7 +83,7 @@ flask run
 Now, open http://127.0.0.1:5000/ on your browser
 
 ### Google Cloud vm deployment
-- 
+===
 
 Follow all the instructions on setup (Do not run the app with Flask) and make sure you set the firewall
 

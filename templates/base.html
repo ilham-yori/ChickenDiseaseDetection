@@ -1,0 +1,165 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta http-equiv="X-UA-Compatible" content="IE=edge">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+<title>Data Science Products</title>
+
+    <!--===============================================================================================-->
+    
+    <!--===============================================================================================-->
+    <link rel="stylesheet" type="text/css" href="{{ url_for('static', filename='vendor/bootstrap/css/bootstrap.min.css') }}">
+    <!--===============================================================================================-->
+    <link rel="stylesheet" type="text/css" href="{{ url_for('static', filename='vendor/fonts/font-awesome-4.7.0/css/font-awesome.min.css') }}">
+    <!--===============================================================================================-->
+    <link rel="stylesheet" type="text/css" href="{{ url_for('static', filename='vendor/animate/animate.css') }}">
+    <!--===============================================================================================-->
+    <link rel="stylesheet" type="text/css" href="{{ url_for('static', filename='vendor/css-hamburgers/hamburgers.min.css') }}">
+    <!--===============================================================================================-->
+    <link rel="stylesheet" type="text/css" href="{{ url_for('static', filename='vendor/select2/select2.min.css') }}">
+    <!--===============================================================================================-->
+    <link rel="stylesheet" type="text/css" href="{{ url_for('static', filename='vendor/css/util.css') }}">
+    <link rel="stylesheet" type="text/css" href="{{ url_for('static', filename='vendor/css/main.css') }}">
+    <link rel="stylesheet" type="text/css" href="{{ url_for('static', filename='vendor/css/files.css') }}">
+    <style>
+        #imag {
+            padding-left: 10px;
+            padding-top: 10px;
+            float: justify;
+            width: 30%;
+        }
+
+        #input {
+            font-family: Poppins-Medium;
+            font-size: 15px;
+            line-height: 1.5;
+            color: #666666;
+            visibility: visible;
+            display: block;
+            width: 100%;
+            background: #e6e6e6;
+            height: 50px;
+            border-radius: 25px;
+            padding: 0 30px 0 68px;
+        }
+        .team-members {
+            color: #fff;
+        }
+    </style>
+
+<!-- Stylesheets Form -->
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<link rel="icon" type="image/png" href="{{ url_for('static', filename='main/images/favicon2.ico') }}"/>
+<link rel="stylesheet" type="text/css" href="{{ url_for('static', filename='form/vendor/bootstrap/css/bootstrap.min.css') }}">
+<link rel="stylesheet" type="text/css" href="{{ url_for('static', filename='form/fonts/font-awesome-4.7.0/css/font-awesome.min.css') }}">
+<link rel="stylesheet" type="text/css" href="{{ url_for('static', filename='form/fonts/iconic/css/material-design-iconic-font.min.css') }}">
+<link rel="stylesheet" type="text/css" href="{{ url_for('static', filename='form/vendor/animate/animate.css') }}">
+<link rel="stylesheet" type="text/css" href="{{ url_for('static', filename='form/vendor/css-hamburgers/hamburgers.min.css') }}">
+<link rel="stylesheet" type="text/css" href="{{ url_for('static', filename='form/vendor/animsition/css/animsition.min.css') }}">
+<link rel="stylesheet" type="text/css" href="{{ url_for('static', filename='form/vendor/select2/select2.min.css') }}">
+<link rel="stylesheet" type="text/css" href="{{ url_for('static', filename='form/vendor/daterangepicker/daterangepicker.css') }}">
+<link rel="stylesheet" type="text/css" href="{{ url_for('static', filename='form/css/util.css') }}">
+<link rel="stylesheet" type="text/css" href="{{ url_for('static', filename='form/css/main.css') }}">
+<link rel="stylesheet" href="{{ url_for('static', filename='main/css/test.css') }}">
+
+<!-- Stylesheets -->
+<link href="{{ url_for('static', filename='main/css/style.css') }}" rel="stylesheet">
+<link href="{{ url_for('static', filename='main/css/responsive.css') }}" rel="stylesheet">
+
+<style>
+    @media screen and (max-width: 1024px) {
+        .hideAndSeekElementMax {
+            display: none;
+        }
+    }
+    @media screen and (min-width: 1024px) {
+        .header-top {
+            display: none;
+        }
+    }
+</style>
+
+</head>
+
+<!-- page wrapper -->
+<body class="boxed_wrapper">
+    {% block content %}{% endblock %}
+
+        <!-- footer-bottom -->
+        <div class="footer-bottom">
+            <div class="container">
+                <div class="copyright"><a href="/">Chicken Disease Classification</a> &copy; 2022 All Right Reserved. Developed by Machine Learning & Cloud Computing Team</div>
+            </div>
+        </div>
+        <!-- footer-bottom end -->
+    
+    <!--Scroll to top-->
+    <button class="scroll-top scroll-to-target" data-target="html">
+        <span class="fa fa-angle-up"></span>
+    </button>
+    
+    <script>
+    
+    var checker = document.getElementById('checkme');
+    var sendbtn = document.getElementById('send');
+    checker.onchange = function() {
+      sendbtn.disabled = !this.checked;
+    };
+        function change(value){
+        document.getElementById("count").value=value;
+        }
+        function readURL(input) {
+            if (input.files && input.files[0]) {
+                var reader = new FileReader();
+                
+                reader.onload = function(e) {
+                $('#preview').attr('src', e.target.result);
+                }
+                
+                reader.readAsDataURL(input.files[0]); // convert to base64 string
+            }
+        }
+    
+     </script>
+    
+    <!-- jequery plugins -->
+    <script src="{{ url_for('static', filename='main/js/jquery.js') }}"></script>
+    <script src="{{ url_for('static', filename='main/js/popper.min.js') }}"></script>
+    <script src="{{ url_for('static', filename='main/js/bootstrap.min.js') }}"></script>
+    
+    <script src="{{ url_for('static', filename='main/js/owl.carousel.min.js') }}"></script>
+    <script src="{{ url_for('static', filename='main/js/wow.js') }}"></script>
+    <script src="{{ url_for('static', filename='main/js/validation.js') }}"></script>
+    <script src="{{ url_for('static', filename='main/js/isotope.js') }}"></script>
+    <!-- <script src="{{ url_for('static', filename='js/html5lightbox/html5lightbox.js') }}"></script> -->
+    <script type="text/javascript" src="{{ url_for('static', filename='main/js/SmoothScroll.js') }}"></script>
+    
+    <!-- map script -->
+    <script src="https://maps.googleapis.com/maps/api/js?key=AIzaSyBevTAR-V2fDy9gQsQn1xNHBPH2D36kck0"></script>
+    <script src="{{ url_for('static', filename='main/js/gmaps.js') }}"></script>
+    <script src="{{ url_for('static', filename='main/js/map-helper.js') }}"></script>
+    
+    <!-- main-js -->
+    <script src="{{ url_for('static', filename='main/js/script.js') }}"></script>
+    
+    <!-- test js -->
+    <script src="{{ url_for('static', filename='main/js/test.js') }}"></script>
+    
+        <!--===============================================================================================-->
+        <script src="{{ url_for('static', filename='vendor/jquery/jquery-3.2.1.min.js') }}"></script>
+        <!--===============================================================================================-->
+        <script src="{{ url_for('static', filename='vendor/bootstrap/js/popper.js') }}"></script>
+        <script src="{{ url_for('static', filename='vendor/bootstrap/js/bootstrap.min.js') }}"></script>
+        <!--===============================================================================================-->
+        <script src="{{ url_for('static', filename='vendor/select2/select2.min.js') }}"></script>
+        <!--===============================================================================================-->
+        <script src="{{ url_for('static', filename='vendor/tilt/tilt.jquery.min.js') }}"></script>
+    
+        <script src="{{ url_for('static', filename='vendor/js/files.js') }}"></script>
+        <!--===============================================================================================-->
+        <script src="{{ url_for('static', filename='vendor/js/main.js') }}"></script>
+    </body><!-- End of .page_wrapper -->
+    </html>

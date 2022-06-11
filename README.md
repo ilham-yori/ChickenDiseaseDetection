@@ -1,50 +1,96 @@
-# Machine Learning Documentation
-shared files follow this link. 
-https://drive.google.com/drive/folders/1jGoohtw3-dMPfQM6iezK7rbz8S0uNiis?usp=sharing
+# Summary Project
 
-Cleaning Dataset.
-(https://drive.google.com/drive/folders/1UdrAKUTGDg7WzY7ehxapKRr73QpFrzw8?usp=sharing)
+Chicken is the most widely kept poultry in Indonesia, this is because chicken is one of the animal proteins that is widely consumed by the public (look for evidence). Most of the chickens consumed are from chicken breeders. One of the farms can accommodate hundreds or even thousands of chickens at once (search for data). With the large number of chickens available, it is difficult to distinguish between healthy and sick chickens. Therefore, a system is needed to find out sick and healthy chickens, as well as the type of chicken disease. This study tries to identify diseases in chickens based on chicken droppings, ranging from color, texture, and size.
+the dataset link that we use can be accessed at the following link :
 
-## VGG16
+```
+https://www.kaggle.com/datasets/allandclive/chicken-disease-1
+```
 
->  result of VGG16 Model
 
-![Classification report vgg screenshot](classification_reportvgg16.png)
+## How did our team come up with this project?
 
-> accuracy and loss metric
+We found that disease in chickens is quite difficult for farmers, because when a chicken is sick, other chickens have the potential to be infected with the same disease, so we propose a project that can recognize disease in chickens through chicken droppings. We are trying to combine machine learning, cloud computing, and mobile development in a disease classification project in chickens.
 
-![metric vgg screenshot](metricvgg16.png)
+## Screenshots
+an example of a dataset used regarding diseases in chickens that have been labeled
+![Example screenshot](readmefiles.png)
 <!-- If you have screenshots you'd like to share, include them here. -->
 
-## VGG19
+Our Team Information
+--
+- (ML) Moh. Badris Sholeh Rahmatullah M2258G2238 
+- (ML) Aulia Ligar Salma Hanani M2258G2240
+- (CC) Steven Febrianto C2172F1707
+- (CC) Dian Puspitasari C2214G1977
+- (MD) Moch Yusuf Faisal Akbar Anwari A2121F1529
+- (MD) Ilham Yori Pradana A2121F1534
 
->  result of VGG19 Model
+## Setup
 
-![Classification report vgg screenshot](classification_reportvgg19.png)
+Download the 1st model in this link :
+```
+https://drive.google.com/file/d/1pUdx3oZluqE5dmLzFvYP7GezKDCGRikN/view?usp=sharing
+```
 
-> accuracy and loss metric
+Download the 2nd model in this link :
+```
+https://drive.google.com/file/d/10KYb1_Vy8hOXzzSt89odNEBS_N3gjTn1/view?usp=sharing
+```
 
-![metric vgg screenshot](metricvgg19.png)
-<!-- If you have screenshots you'd like to share, include them here. -->
+After the files are downloaded, you have to move the files from download directory into /ChickenDiseaseDetection/static/MLModule directory
+```
+mv ./download ./ChickenDiseaseDetection/static/MLModule
+```
 
-## ResNet
+Clone this repository
+```
+git clone https://github.com/ilham-yori/ChickenDiseaseDetection.git
+```
 
->  result of ResNet Model
+Change the current directory to the cloned git directory
+```
+cd ChickenDiseaseDetection
+```
 
-![image](https://user-images.githubusercontent.com/22268453/170811633-78a40895-4777-456b-9b38-dd65ccc593af.png)
+Create the python virtual environment
+```
+pip install virtualenv
+virtualenv venv
+```
 
-> accuracy and loss metric
+Initialize virtual environment
+#### Linux
+```
+source venv/bin/activate
+```
 
-![image](https://user-images.githubusercontent.com/22268453/170811668-00a71756-0500-4d79-a938-d9e22a52a12f.png)
-<!-- If you have screenshots you'd like to share, include them here. -->
+#### Windows
+```
+.\venv\Scripts\activate
+```
 
-## MobileNet
+Install the dependencies requirement with pip
+```
+pip install -r requirements.txt
+```
 
->  result of MobileNet Model
+Run the app with Flask
+```
+flask run
+```
 
-![Classification report vgg screenshot](classification_reportmobilenet.png)
+Now, open http://127.0.0.1:5000/ on your browser
 
-> accuracy and loss metric
+### Google Cloud vm deployment
+---
 
-![metric vgg screenshot](metricmobilenet.png)
-<!-- If you have screenshots you'd like to share, include them here. -->
+Follow all the instructions on setup (Do not run the app with Flask) and make sure you set the firewall
+
+For our project, we set the firewall on 0.0.0.0 and allow the 5000 port
+
+then, copy the code below :
+
+```
+gunicorn --bind 0.0.0.0:5000 main:app --daemon
+```
